@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\ContactModel;
 use Illuminate\Http\Request;
 
 class ContactController extends Controller
@@ -11,7 +12,10 @@ class ContactController extends Controller
      */
     public function index()
     {
-        return view('contact');
+        $data = [
+            'dataContact' =>  ContactModel::all(),
+        ];
+        return view('contact', $data);
     }
 
     /**

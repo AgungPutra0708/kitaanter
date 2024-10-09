@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\TeamModel;
 use Illuminate\Http\Request;
 
 class TeamController extends Controller
@@ -11,7 +12,10 @@ class TeamController extends Controller
      */
     public function index()
     {
-        return view('team');
+        $data = [
+            'dataTeams' =>  TeamModel::all(),
+        ];
+        return view('team', $data);
     }
 
     /**

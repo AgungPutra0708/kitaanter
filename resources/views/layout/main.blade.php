@@ -42,7 +42,7 @@
         <div class="container">
             <div class="row g-5">
                 <div class="col-md-6 text-center text-md-start">
-                    <p class="mb-md-0">&copy; <a class="text-primary" href="#">KitaAnter</a>. All Rights
+                    <p class="mb-md-0">&copy; <a class="text-primary" href="#">KitaAnter.id</a>. All Rights
                         Reserved.</p>
                 </div>
             </div>
