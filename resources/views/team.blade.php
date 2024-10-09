@@ -2,7 +2,7 @@
 
 @section('content')
     <!-- Team Start -->
-    <div class="container-fluid py-5" style="min-height: 80vh">
+    <div class="container-fluid py-5">
         <div class="container">
             <div class="text-center mx-auto mb-5" style="max-width: 500px;">
                 <h3 class="d-inline-block text-kitaanter text-uppercase border-bottom border-5">Our Management</h3>

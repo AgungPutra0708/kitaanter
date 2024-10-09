@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\AboutModel;
+use App\Models\HomeModel;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -11,7 +13,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $data = [
+            'dataHome' =>  HomeModel::all(),
+            'dataAbout' =>  AboutModel::all(),
+        ];
+        return view('home', $data);
     }
 
     /**

@@ -28,14 +28,17 @@
 
     <!-- Template Stylesheet -->
     <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
+
+    <!-- Fancybox CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4/dist/fancybox.css" rel="stylesheet" />
 </head>
 
-<body>
+<body class="d-flex flex-column min-vh-100">
     @include('layout.navbar')
     @yield('content')
 
     <!-- Footer Start -->
-    <div class="container-fluid bg-success text-light border-top border-secondary py-4">
+    <div class="container-fluid bg-success text-light border-top border-secondary py-4 mt-auto">
         <div class="container">
             <div class="row g-5">
                 <div class="col-md-6 text-center text-md-start">
@@ -60,6 +63,9 @@
     <script src="{{ asset('assets/lib/tempusdominus/js/moment.min.js') }}"></script>
     <script src="{{ asset('assets/lib/tempusdominus/js/moment-timezone.min.js') }}"></script>
     <script src="{{ asset('assets/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js') }}"></script>
+
+    <!-- Fancybox JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4/dist/fancybox.umd.js"></script>
 
     <!-- Template Javascript -->
     <script src="{{ asset('assets/js/main.js') }}"></script>

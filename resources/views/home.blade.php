@@ -2,11 +2,15 @@
 
 @section('content')
     <!-- Hero Start -->
-    <div class="container-fluid bg-primary mb-5 hero-header">
-        <div class="col-lg-8 text-center text-lg-start">
-            <img src="{{ asset('assets/img/hero-banner.jpg') }}" alt="" class="hero-image">
-        </div>
-    </div>
+    @foreach ($dataHome as $data)
+        @if ($data->section == 'hero')
+            <div class="container-fluid bg-primary mb-5 hero-header">
+                <div class="col-lg-8 text-center text-lg-start">
+                    <img src="{{ asset('assets/img/' . $data->banner) }}" alt="" class="hero-image">
+                </div>
+            </div>
+        @endif
+    @endforeach
     <!-- Hero End -->
 
     <!-- About Start -->
@@ -14,22 +18,25 @@
         <div class="container">
             <div class="row gx-5">
                 <div class="col-lg-5 mb-5 mb-lg-0" style="min-height: 500px;">
-                    <div class="position-relative h-100">
-                        <img class="position-absolute w-100 h-100 rounded" src="{{ asset('assets/img/about-us.jpg') }}"
-                            style="object-fit: cover;">
-                    </div>
+                    @foreach ($dataHome as $data)
+                        @if ($data->section == 'about')
+                            <div class="position-relative h-100">
+                                <img class="position-absolute w-100 h-100 rounded"
+                                    src="{{ asset('assets/img/' . $data->banner) }}" style="object-fit: cover;">
+                            </div>
+                        @endif
+                    @endforeach
                 </div>
                 <div class="col-lg-7">
-                    <div class="mb-4">
-                        <h5 class="d-inline-block text-kitaanter text-uppercase border-bottom border-5">About Us</h5>
-                        <h1 class="display-4 text-kitaanter">Title About Us</h1>
-                    </div>
-                    <p class="about-desc">Tempor erat elitr at rebum at at clita aliquyam consetetur. Diam dolor diam ipsum
-                        et, tempor
-                        voluptua sit consetetur sit. Aliquyam diam amet diam et eos sadipscing labore. Clita erat ipsum
-                        et lorem et sit, sed stet no labore lorem sit. Sanctus clita duo justo et tempor consetetur
-                        takimata eirmod, dolores takimata consetetur invidunt magna dolores aliquyam dolores dolore.
-                        Amet erat amet et magna</p>
+                    <h5 class="d-inline-block text-kitaanter text-uppercase border-bottom border-5">About Us</h5>
+                    @foreach ($dataAbout as $data)
+                        @if ($data->home == 'true')
+                            <div class="mb-4">
+                                <h1 class="display-4 text-kitaanter">{{ $data->title }}</h1>
+                            </div>
+                            <p>{!! $data->description !!}</p>
+                        @endif
+                    @endforeach
                     <div class="row g-3 pt-3">
                         <div class="col-lg-3">
                             <a href="{{ route('about') }}" class="btn btn-success rounded-pill">Read More</a>
