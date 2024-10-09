@@ -31,6 +31,9 @@
 
     <!-- Fancybox CSS -->
     <link href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4/dist/fancybox.css" rel="stylesheet" />
+
+    <!-- AOS CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 
 <body class="d-flex flex-column min-vh-100">
@@ -67,8 +70,15 @@
     <!-- Fancybox JS -->
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4/dist/fancybox.umd.js"></script>
 
+    <!-- AOS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
     <!-- Template Javascript -->
     <script src="{{ asset('assets/js/main.js') }}"></script>
+
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>

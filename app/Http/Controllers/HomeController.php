@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\AboutModel;
 use App\Models\HomeModel;
+use App\Models\ProductModel;
+use App\Models\TeamModel;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -16,6 +18,8 @@ class HomeController extends Controller
         $data = [
             'dataHome' =>  HomeModel::all(),
             'dataAbout' =>  AboutModel::all(),
+            'dataTeams' =>  TeamModel::all(),
+            'dataProducts' =>  ProductModel::all(),
         ];
         return view('home', $data);
     }
