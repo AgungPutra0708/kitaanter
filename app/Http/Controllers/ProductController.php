@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\HomeModel;
 use App\Models\ProductModel;
 use Illuminate\Http\Request;
 
@@ -13,6 +14,7 @@ class ProductController extends Controller
     public function index()
     {
         $data = [
+            'dataHome' =>  HomeModel::all(),
             'dataProducts' =>  ProductModel::all(),
         ];
         return view('product', $data);
