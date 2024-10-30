@@ -18,6 +18,8 @@
                         class="nav-item nav-link {{ Route::is('product') ? 'active' : '' }}">Product</a>
                     <a href="{{ route('management') }}"
                         class="nav-item nav-link {{ Route::is('management') ? 'active' : '' }}">Management</a>
+                    <a href="{{ route('news') }}"
+                        class="nav-item nav-link {{ Route::is('news') || Route::is('news.detail') ? 'active' : '' }}">News</a>
                     <a href="{{ route('contact') }}"
                         class="nav-item nav-link {{ Route::is('contact') ? 'active' : '' }}">Contact</a>
                 </div>

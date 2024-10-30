@@ -23,11 +23,9 @@
                                 </div>
                                 <div class="d-flex mt-auto border-top p-4">
                                     <a class="btn btn-lg btn-success btn-lg-square rounded-circle me-3"
-                                        href="{{ $data->twitter }}"><i class="fab fa-twitter"></i></a>
+                                        href="{{ $data->link1 }}"><i class="fab fa-tiktok"></i></a>
                                     <a class="btn btn-lg btn-success btn-lg-square rounded-circle me-3"
-                                        href="{{ $data->facebook }}"><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-lg btn-success btn-lg-square rounded-circle"
-                                        href="{{ $data->linkedin }}"><i class="fab fa-linkedin-in"></i></a>
+                                        href="{{ $data->link2 }}"><i class="fab fa-instagram"></i></a>
                                 </div>
                             </div>
                         </div>
